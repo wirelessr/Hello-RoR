@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show name edit update destroy ]
 
   # GET /users or /users.json
   def index
@@ -14,6 +14,11 @@ class UsersController < ApplicationController
   # GET /users/count
   def count
     @count = User.count
+  end
+
+  # GET /users/1/name
+  def name
+    @name = @user.first_name + ' ' + @user.last_name
   end
 
   # GET /users/new
