@@ -25,6 +25,11 @@
     <%= form.label :gender %>
     <%= form.select :gender, User::GENDER.map{ |g| [t(g, :scope => "user.gender"), g] }, {}, :class => "form-control" %>
   </div>
+  
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
