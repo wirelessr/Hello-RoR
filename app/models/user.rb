@@ -13,4 +13,6 @@ class User
     GENDER = ["male", "female", "others"]
     validates_inclusion_of :gender, :in => GENDER
     validates :age, presence: true, numericality: { only_integer: true, greater_than: 0 }
+
+    has_one :shop
 end

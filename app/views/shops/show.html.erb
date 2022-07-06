@@ -7,7 +7,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @shop.user %>
+  <%= @shop.user.first_name %> <%= @shop.user.last_name %>
 </p>
 
 <%= link_to 'Edit', edit_shop_path(@shop) %> |
