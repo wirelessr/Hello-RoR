@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :shops
   resources :users do
     collection do
       get 'count'
