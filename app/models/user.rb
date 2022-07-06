@@ -4,6 +4,7 @@ class User
     field :last_name, type: String
     field :gender, type: String
     field :age, type: Integer
+    field :address, type: Hash
 
     validates :first_name, presence: true, length: { minimum: 1 }
     validates :last_name, presence: true, length: { minimum: 1 }

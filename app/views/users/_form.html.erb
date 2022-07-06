@@ -31,6 +31,20 @@
     <%= form.text_field :age %>
   </div>
 
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.fields_for :address do |af| %>
+      <%= af.label :country %>
+      <%= af.text_field :country %>
+      
+      <%= af.label :address_1 %>
+      <%= af.text_field :address_1 %>
+      
+      <%= af.label :address_2 %>
+      <%= af.text_field :address_2 %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
