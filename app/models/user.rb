@@ -1,9 +1,9 @@
 class AddressValidator < ActiveModel::Validator
     def validate(record)
         begin
-            record.address.assert_valid_keys(:country, :address_1, :address_2) if record.address
+            record.address.assert_valid_keys("country", "address_1", "address_2") if record.address
         rescue ArgumentError
-            record.errors[:base] << "Address is invalid"
+            record.errors[:base] << record.address
         end
     end
 end

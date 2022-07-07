@@ -8,11 +8,11 @@ RSpec.describe User, type: :model do
       expect( user ).to be_valid
       
       user = User.new(:first_name => 'John', :last_name => 'Doe', :age => 25, :gender => 'female',
-                      :address => {:country => 'United States'})
+                      :address => {"country" => 'United States'})
       expect( user ).to be_valid
       
       user = User.new(:first_name => 'John', :last_name => 'Doe', :age => 25, :gender => 'female',
-                      :address => {:country => 'United States', :address_1 => 'United States', :address_2 => 'United States'})
+                      :address => {"country" => 'United States', "address_1" => 'United States', "address_2" => 'United States'})
       expect( user ).to be_valid
     end
 
